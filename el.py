@@ -18,7 +18,7 @@ Extracted_data()
 
 #LOADING TO POSTGRESQL DATABASE 
 from sqlalchemy import create_engine
-engine = create_engine('postgresql://postgres:01ajstyles@localhost:5432/capstone_project')
+engine = create_engine('postgresql://postgres:{My_password}@localhost:5432/capstone_project')
 engine.connect()
 covid_19_df.to_sql('covid_19_data',con=engine,if_exists='append')
 
